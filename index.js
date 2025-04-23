@@ -33,6 +33,7 @@ var corsOptions = {
     "http://localhost:3000",
     "http://192.168.1.39:3001",
     "http://192.168.1.39:3000",
+    "http://localhost:5173"
   ],
   optionsSuccessStatus: 200,
   credentials: true,
