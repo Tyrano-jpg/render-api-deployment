@@ -1,0 +1,34 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code</title>
+    <style>
+      @media print { @page { size: 70mm 70mm; margin: 0; } body {
+      background-color: white; margin: 0; padding: 0; display: flex;
+      align-items: center; justify-content: center; height: 100%; } } body {
+      background-color: white; margin: 0; padding: 0; display: flex;
+      flex-direction: column; align-items: center; justify-content: center;
+      height: 100%; font-family: Arial, sans-serif; } #first{ margin-top: 10px;
+      } #first img { width: 150px; height: 150px; } #second { padding: 10px 0px
+      0 0px; text-align: center; } #header { font-size: 8px; text-align: left; }
+      #second span { margin: 0; font-size: 15px; font-weight: bold; line-height:
+      1; } #second p { margin: 0; font-size: 12px; }
+    </style>
+  </head>
+
+  <body>
+    <div id="header">
+      <span>Kindly show this QR Code at the Registration Desk</span>
+    </div>
+    <div id="first">
+      <img id="qrImage" src="{{details.qrcode}}" alt="QR Code" />
+    </div>
+    <div id="second">
+      {{!-- <span>{{details.full_name}}</span> --}}
+      <span>{{details.user_full_name}}</span>
+      <p>{{details.company_name}}</p>
+    </div>
+  </body>
+</html>

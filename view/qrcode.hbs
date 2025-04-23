@@ -1,0 +1,32 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code</title>
+    <style>
+      @media print { @page { size: 200mm 180mm; margin: 0; } body {
+      background-color: white; margin: 0; padding: 0; display: flex;
+      align-items: center; justify-content: center; height: 100%; } } body {
+      background-color: white; border: 1px solid red; margin: 0; padding: 0;
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; height: 114px; width: 188px; font-family: Arial,
+      sans-serif; } #first img { width: 85px; height: 80px; } #second { padding:
+      2px 0px 0 0px; text-align: center; } #second span { margin: 0; font-size:
+      12px; font-weight: bold; line-height: 1; } #second p { margin: 0;
+      font-size: 10px; }
+    </style>
+  </head>
+
+  <body>
+    <div id="first">
+      <img id="qrImage" src="{{details.qrcode}}" alt="QR Code" />
+    </div>
+    <div id="second">
+      <span>{{details.first_name}}</span>
+      <span>{{details.last_name}}</span>
+      <p>{{details.company_name}}</p>
+    </div>
+  </body>
+
+</html>
