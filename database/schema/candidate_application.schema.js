@@ -21,7 +21,6 @@ const applicationSchema = new mongoose.Schema({
 
   linkedin_url: {
     type: String,
-    required: true,
     trim: true,
   },
   resume_file: {
